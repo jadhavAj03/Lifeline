@@ -1,0 +1,20 @@
+<div class="container">
+<div class="row">
+    <div class="mt-4 text-primary"><h3>Top Deals</h3></div>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of topdeals">
+        <ng-template carouselSlide [id]="slide.id">
+          <div class="card" style="width: 16rem;">
+            <img [src]="slide.productImageSlug" [alt]="slide.alt" [title]="slide.title"
+            class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Add</a>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+</div>
+</div>
